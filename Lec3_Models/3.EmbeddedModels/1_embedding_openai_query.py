@@ -1,0 +1,10 @@
+from langchain_openai import OpenAIEmbeddings
+from dotenv import load_dotenv
+load_dotenv() 
+
+embedding = OpenAIEmbeddings(model='text-embedding-3-small', dimensions=32)
+
+result = embedding.embed_query("planet earth is 3 rd in distance from sun")
+
+print(result)
+print(sum(result))
