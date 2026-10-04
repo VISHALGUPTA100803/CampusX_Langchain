@@ -1,10 +1,12 @@
-from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
 
 load_dotenv()
 
 # model = ChatOpenAI(model='gpt-5-nano', temperature=1.5, reasoning_effort='minimal', max_completion_tokens=50) 
-model = ChatOpenAI(model='gpt-5-nano-2025-08-07', temperature=1.5, reasoning_effort='minimal', max_completion_tokens=200)
+model = ChatOpenAI(model='gpt-5-nano-2025-08-07',
+                    temperature=1.5,
+                    reasoning_effort='minimal', max_completion_tokens=200)
 
 # result = model.invoke("What is the capital of india")
 
