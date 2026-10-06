@@ -37,7 +37,7 @@ prompt3 = PromptTemplate(
 )
 
 conditional_chain = RunnableBranch(
-    (lambda x : x.sentiment== "positive", prompt2 | model | parser1),
+    (lambda x : x.sentiment== "positive", prompt2 | model | parser1), # (condition, Runnable)
     (lambda x: x.sentiment == "negative", prompt3 | model | parser1),
     RunnableLambda(lambda x : "could not find sentiment")
 )
@@ -47,6 +47,9 @@ chain = classifier_chain | conditional_chain
 result = chain.invoke({"feedback": "this smartphone works well"})
 
 print(result)
+
+print("hello")
+
 
 # chain.get_graph().print_ascii()
 # classifier_chain.get_graph().print_ascii()
