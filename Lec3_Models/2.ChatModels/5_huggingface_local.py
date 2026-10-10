@@ -1,10 +1,13 @@
-from langchain_huggingface import HuggingFacePipeline, ChatHuggingFace
 import os
+os.environ['HF_HOME'] = 'D:/huggingface_cache'
+
+from langchain_huggingface import HuggingFacePipeline, ChatHuggingFace
+
 from transformers import GenerationConfig
 from dotenv import load_dotenv
 load_dotenv()
 
-os.environ['HF_HOME'] = 'D:/huggingface_cache'
+
 
 gen_config = GenerationConfig(temperature=0.5, do_sample=True)
 llm = HuggingFacePipeline.from_model_id(

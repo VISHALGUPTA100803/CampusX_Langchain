@@ -2,4 +2,27 @@
 .env
 venv
 .vscode
-__pycache__/
+__pycache__/ 
+
+# Jupyter autosave copies
+.ipynb_checkpoints/
+
+
+# Python
+*.pyc
+.pytest_cache/
+
+
+
+# Secrets
+.env
+
+# Large data and model files
+*.zip
+*.h5
+*.pkl
+data/raw/
+
+# OS junk
+.DS_Store
+Thumbs.db
