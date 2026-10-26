@@ -28,3 +28,7 @@ data/raw/
 Thumbs.db 
 
 .agents
+
+# Chroma databases
+/Lec12_Vector_Stores/my-chroma-db/
+/Lec12_Vector_Stores/second-chroma-db/
